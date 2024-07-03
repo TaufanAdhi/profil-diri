@@ -1,0 +1,1121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+    
+    display: flex;
+    
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+    background-color: white;
+    min-height: 3000px;
+}
+
+
+/* class javascript*/
+
+
+
+
+
+/* end */
+
+
+
+
+/* icon */
+
+.icon{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-direction: column;
+    border-radius: 50%;
+    transition: 0.3s;
+
+}
+
+
+
+#icon {
+    color:  white; 
+    transition: 0.3s;
+       
+}
+
+.icon:hover {
+    background-color: white;
+}
+.icon:hover #icon{
+    color: black;
+}
+
+
+
+
+
+
+
+
+/* navbar side */
+nav {
+    position: fixed;
+    display: flex;
+    height: 100vh;
+    width: 25%;
+    background-color: black;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    left: 0;
+    transition: 0.3s;
+    z-index: 99;
+}
+
+
+
+
+/* class untuk menyembunyikan class  */
+
+
+.navbar.active {  
+    
+    transition: 1s;
+    left: -100%;
+
+}
+
+/* end  */
+
+
+.side {
+   
+    overflow: hidden;
+    z-index: 9;
+    display: flex;
+    position: fixed;
+    top:3%;
+    left: 1%;
+    width: 5%;
+    height: 4rem;
+    flex-direction: column;
+    background-color: black;
+    
+    border-radius: 50%;
+    color: white;
+    justify-content: center;
+    
+}
+
+
+
+
+
+.side a {
+    /* z-index: 9;
+    display: flex;
+    position: fixed;
+    top: 26%;
+    width: 5%;
+    height: 4rem;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0rem;
+    border-radius: 50%;
+    color: white;  */
+    padding-top: 0.7rem;
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 99999999;
+    
+}
+
+.side span{
+    z-index: 9999999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 153, 255);
+    bottom: -100%;
+    animation: atas 1s infinite alternate;
+
+}
+
+.side a:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+nav .gambar {
+    margin-top: 2   rem;
+    margin-bottom: 0.5rem;
+    width: 12rem;
+    height: 12rem;
+    background-color: white;
+    border-radius: 50%;
+    background-image: url(gambar/saya.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* end */
+
+/* menu sytyle */
+
+
+.menu {
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+
+
+
+.menu a {
+    position: relative; 
+    padding: 0rem 1rem;
+    color:  white;
+    background-color: rgba(255, 0, 0, 0);
+    transition: 0.3s;
+}
+
+.menu .trans {
+    position: relative;
+    margin-top: 2rem;
+}
+
+
+.menu div .coba {
+   position: absolute; 
+   width: 100%; 
+   height: 100%;
+   background-color: rgb(0, 0, 0);
+   transform: scaleY(0);
+   transition: 0.3s;
+}
+
+
+.menu div:hover .coba {
+    background-color: rgb(255, 255, 255);
+    transform: scaleY(1);
+    
+
+}
+
+.menu div:hover a {
+
+    color: rgb(0, 0, 0);
+}
+
+
+
+/*  end */
+
+
+
+
+/* sosmed start  */
+
+.sosmed {
+    
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2rem;
+   
+}
+
+.sosmed a{
+    margin-right: 1rem;
+    color: white;
+
+
+}
+.sosmed a:hover {
+
+    color: brown;
+}
+
+
+
+
+/*  sosmed end */
+
+
+
+/* container  */
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    width: 75%;
+    height: 100vh;
+    
+
+}
+
+.container.active {
+
+    width: 100%;
+
+
+
+}
+
+
+
+
+
+
+/* hero1*/
+
+
+
+
+
+
+
+
+
+.hero1 {
+    padding: 0rem 0rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+
+
+
+.hero1::after {
+    content: '';
+    position: absolute;
+    bottom: -176px;
+    display: block;
+    width: 100%;
+    height: 9rem;
+    z-index: 1;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 12%,rgb(58 56 56) 80%);
+
+}
+
+
+
+
+.hero1 .headline{
+    margin-top: 1rem;
+    top: 0;
+    width: 100%;
+    position: absolute;
+
+}
+
+
+.hero1 .headline.active {
+    width: 84%;
+    top: -11px;
+    left: 16%;
+
+
+}
+
+
+.hero1 .headline h1{
+    position: relative;
+    top: -20rem;
+    font-family: 'VT323', monospace;
+    font-style: italic;
+    font-size: 5rem;
+    text-indent: 25%;
+    animation: judul 1s 1s forwards;
+    word-spacing: 3px;
+}
+
+.hero1 .headline span{
+    position: absolute;
+    margin-left: 2rem;
+    
+    color: white;
+    text-shadow: 5px 3px 14px black;
+
+
+} 
+
+
+
+.hero1 .headline .s{
+    position: absolute;
+    left: -100%;
+    font-weight: bold;
+    font-size: 5rem;
+    animation: saya 0.5s cubic-bezier(.06,.46,.76,1.41) 1s forwards;
+}
+
+
+.hero1 .headline .s.active{
+    position: absolute;
+    left: 44.3%;
+    font-weight: bold;
+    font-size: 5rem;
+    animation: none;
+}   
+
+
+
+.hero1 .img {
+    position: absolute;
+    left: 1rem;
+    width: 100%;
+    height: 100vh;
+    background-image: url(gambar/J7406575.JPG);
+    background-size: cover;
+    background-position: 0px -565px;
+    background-repeat: no-repeat;
+    filter: grayscale(62%) blur(2px);
+    animation: animasi 1s 1s ease-in-out forwards;
+
+
+  
+}
+
+
+.hero1 .img.active{
+
+    left: 5%;
+
+}
+
+
+
+/* hero1 desc */
+.hero1 .desc{
+
+    position: absolute;
+    left: -100%;
+    display: flex;
+    padding: 1rem;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    animation: desc 1s 1.5s forwards;
+    
+
+}
+
+/* clas desc active  */
+
+.hero1 .desc.active {
+    position: absolute;
+    right: 0;
+    width: 40%;
+
+
+}
+
+
+
+
+
+.hero1 .desc h1{
+    text-align: center;
+    margin-top: 7rem;    
+    font-weight: bold;
+
+}
+
+
+
+
+.hero1 .desc p{
+    text-indent: 3rem;
+    line-height: 1.8rem;
+    margin-top: 5rem;
+    font-size: 1rem;
+
+}
+
+
+
+
+/* hero pendidikan */
+
+
+.container .pend{
+    margin-top: 11rem;
+    padding: 2rem 0rem;
+    display: flex;
+    width: 100%;
+    /* max-height: 70vh; */
+    background-color: rgba(34, 30, 30, 0.895);
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    
+
+}
+.container .pend::after {
+    content: '';
+    position: absolute;
+    bottom: -138px;
+    display: block;
+    width: 100%;
+    height: 9rem;
+    
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 12%,rgb(58 56 56) 71%);
+
+}
+
+
+.container .pend h1{
+    font-family: 'VT323', monospace;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+
+}
+
+.container .pend p {
+    margin-bottom: 5rem;
+    width: 25rem;
+
+
+}
+
+
+
+.container .pend .image-pend {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 25rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+
+/* image  */
+
+.container .pend .image-pend .coba {
+
+    background-image: url(gambar-pend/smp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+
+/* pend-nama */
+
+.container .pend .image-pend .pend-nama{
+    color: rgba(255, 255, 255, 0.735);
+    position: absolute;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.493);
+    font-family: 'Roboto Mono', monospace;
+    line-height: 5rem;
+    text-align: center;
+    
+}
+
+.container .pend .image-pend .pend-nama h1{
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+}
+
+
+
+
+
+
+
+
+/* Tombol */
+.container .pend .image-pend .kanan-pend{
+    color: white;
+    top: 50%;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(0, 0, 0);
+    right: 0;
+    z-index: 99999;
+}
+
+
+
+
+.container .pend .image-pend .kiri-pend {
+    z-index: 99999;
+    left: 0;
+
+
+}
+
+
+
+
+
+
+
+/* end */
+
+
+
+/* hobi */
+
+
+.hobi {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    background-color: rgba(255, 255, 255, 0.83);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    width: 100%;
+    align-items: center;
+    
+
+}
+
+
+
+
+.hobi h1 {
+    letter-spacing: 1rem;
+  
+    color: rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    font-family: 'VT323', monospace;
+    font-size: 5rem;
+}
+
+.hobi span {
+    color: rgb(0, 0, 0);
+    
+    
+}
+
+.hobi .hobi-cont{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 68rem;
+    height: 28rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    align-content: center;
+    align-items: center;
+}
+
+
+.hobi-cont .kotak {
+    display: flex;
+    align-items: flex-end;
+    transition: 1s;
+
+}
+
+
+/* hobi-img */
+
+.hobi-cont .hobi-img {
+
+    background-image: url(gambar-hob/coding.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+.hobi-cont .hobi-img1{
+
+    background-image: url(gambar-hob/badminton.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+.hobi-cont .hobi-img2{
+
+    background-image: url(gambar-hob/game.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+/* pengaturan Judul HOBI */
+
+
+.hobi-cont h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    text-align: center;
+    
+    background-color: rgba(0, 0, 0, 0.163);
+    color: white;
+    text-align: center;
+    
+}
+
+.hobi-cont .kotak a {
+    width: 100%;
+}
+.hobi-cont .kotak a:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.384);
+}
+
+
+.judul-hobi {
+    display:  none;
+}
+
+
+
+
+
+/* pengaturan hobi javascript  */
+
+
+.kiri {
+    position: absolute;
+    left: 0;
+    transition: 1s;
+    z-index: 1;
+    height: 50%;
+    width: 33.3%;
+    background-position: 0% 78%;
+}
+
+.tengah {
+    transition: 1s;
+    position: absolute;
+    left: 33.3%;
+    height: 100%;
+    width: 33.4%;
+    z-index: 999;
+
+}
+
+
+.kanan {
+    transition: 1s;
+    position: absolute;
+    left: 66.6%;
+    height: 50%;
+    width: 33.3%;
+   z-index: 1;
+
+}
+
+
+/* active */
+.hobi-cont.active {
+
+    width: 82rem;
+    height: 33rem;
+
+
+}
+
+
+
+/* cta HOBI  */
+
+.hobi-cont .hobi-cta {
+    position: absolute;
+    right: 0;
+    z-index: 99999;
+    color: white;
+    background-color: black;
+
+
+}
+
+.hobi-left {
+    position: absolute;
+    z-index: 999;
+    color: white;
+    background-color: black;
+    left: 0;
+
+}
+
+
+
+/* hobi saat di click  */
+
+.hobi-click {
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.388);
+    /* z-index: 9999; */
+    padding: 0rem 0%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0;
+    transition: 1s;
+}
+
+
+
+.hobi-click .hobi-conten {
+    padding: 1rem 3%;
+    width: 62rem;
+    height: 33rem;
+    background-color: rgb(0, 0, 0);
+    display: none;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.hobi-click .hobi-conten h1 {
+    text-align: center;
+    color: white;
+    width: 100%;
+
+}
+
+.hobi-click .hobi-conten img {
+    
+    width: 40%;
+    height: 78%;
+    object-fit: cover;
+
+}
+
+.hobi-click .hobi-conten p {
+    text-indent: 5rem;
+    padding-left: 1rem;
+    color: white;
+    font-size: 1rem;
+    width: 60%;
+
+}
+.hobi-click .hobi-conten a {
+    color: red;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    
+}
+
+
+.hobi-click .hobi-conten a:hover {
+    
+    color: white;
+   
+
+}
+/* end*/
+
+
+/* mulai start portofolio */
+
+.port {
+    padding: 2rem 0rem 0%;
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.732);
+   background-image: url(gambar/anime.jpg);
+   background-size: cover;
+}
+.port h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow:0.3rem 0.4rem 0.3rem rgba(255, 0, 0, 0.83);
+
+}
+
+.port-conten {
+    
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.567);
+
+}
+
+
+
+.port .port-conten div{
+    margin-left: 3rem;
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+    width: 30%;
+    height: 15rem;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.port .port-conten .port-lihat{
+    overflow: hidden;
+}
+
+.port .port-conten .port-lihat:hover div {
+
+    bottom: 0;
+
+}
+
+
+
+.port .port-conten .port-lihat div {
+    position: relative;
+    bottom: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.888);
+    transition: 0.5s;
+}
+.port .port-conten .port-lihat div a{
+    display: block;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 1rem ;
+    
+
+}
+
+
+.port .port-conten .port-1 {
+
+    background-image: url(gambar-port/aku.png);
+    background-size: cover;
+
+
+}
+
+.port .port-conten .port-2 {
+
+    background-image: url(gambar-port/potato.png);
+    background-size: cover;
+
+
+}
+
+
+
+.footer {
+    border-top: 2rem solid rgb(255, 44, 44);
+    padding: 2rem 7%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    font-size: 0.7rem;
+    
+}
+
+.footer .foot-sosmed {
+
+    margin-bottom: 2rem;
+
+}
+
+.footer .foot-sosmed a{
+
+    margin-left: 1rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* keyframe */
+
+
+@keyframes animasi {
+
+    from{
+        
+        
+
+
+    }
+    
+    to{
+        
+        width: 44%;
+        height: 83vh;
+        filter: grayscale(0%) blur(0px);
+        background-position: 0px -119px;
+        transform: translateY(55px);
+
+
+    }
+
+
+}
+
+
+@keyframes desc{
+
+    from{
+        left: -100;
+
+    }
+
+
+    to{
+        left: 50%;
+
+    }
+
+
+
+}
+
+
+@keyframes judul{
+
+    from{
+
+    }
+
+    to{
+
+        top: 0;
+
+    }
+
+
+}
+
+
+@keyframes saya{
+
+    0%{
+
+        left: -100%;
+
+
+    }
+
+
+    100%{
+
+        left: 49.5%;
+        top: 10%;
+
+        transform: rotate(180deg);  
+
+    }
+
+}
+
+
+
+@keyframes atas{
+
+    from{
+
+        bottom: -100%;
+
+    }
+
+    to{
+
+        bottom: 0%;
+
+
+    }
+
+
+}
